@@ -1,0 +1,693 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <title>Бархат — кофейня и обжарочная</title>
+    <meta
+      name="description"
+      content="Бархат — кофейня с собственной обжаркой. Авторские напитки, свежая выпечка, зерно на вынос."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,500;0,600;1,500&family=Manrope:wght@400;500;600;700&display=swap"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- ===== Шапка ===== -->
+    <header class="header" id="header">
+      <div class="container header__inner">
+        <a href="#top" class="logo" aria-label="Бархат — на главную">
+          <span class="logo__mark">Б</span>
+          <span class="logo__word">Бархат</span>
+        </a>
+        <div class="header__actions">
+          <a href="#booking" class="btn btn--primary btn--sm header__cta"
+            >Забронировать</a
+          >
+          <button
+            class="menu-btn"
+            id="menuOpen"
+            type="button"
+            aria-label="Открыть меню"
+            aria-expanded="false"
+            aria-controls="drawer"
+          >
+            <span class="menu-btn__label">Меню</span>
+            <span class="menu-btn__icon" aria-hidden="true"
+              ><i></i><i></i><i></i
+            ></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!--Боковое меню-->
+    <div class="overlay" id="overlay" hidden></div>
+    <aside
+      class="drawer"
+      id="drawer"
+      aria-label="Меню сайта"
+      aria-hidden="true"
+    >
+      <div class="drawer__top">
+        <span class="logo">
+          <span class="logo__mark">Б</span>
+          <span class="logo__word">Бархат</span>
+        </span>
+        <button
+          class="close-btn"
+          id="menuClose"
+          type="button"
+          aria-label="Закрыть меню"
+        >
+          <i></i><i></i>
+        </button>
+      </div>
+
+      <nav class="drawer__nav" aria-label="Разделы">
+        <a href="#about"><span>О нас</span><small>история и обжарка</small></a>
+        <a href="#signature"
+          ><span>Авторские напитки</span><small>4 позиции</small></a
+        >
+        <a href="#menu"
+          ><span>Меню и цены</span><small>кофе, десерты, завтраки</small></a
+        >
+        <a href="#beans"
+          ><span>Зерно на вынос</span><small>пачки по 250 г</small></a
+        >
+        <a href="#visit"
+          ><span>Часы и адрес</span><small>как нас найти</small></a
+        >
+      </nav>
+
+      <div class="drawer__info">
+        <div class="drawer__status" data-status>
+          <span class="dot"></span
+          ><span data-status-text>Ежедневно с 08:00</span>
+        </div>
+        <p>ул. Кофейная, 7, Таллинн</p>
+        <p>+372 5555 0123</p>
+      </div>
+
+      <a href="#booking" class="btn btn--primary btn--full" data-close
+        >Забронировать столик</a
+      >
+    </aside>
+
+    <main id="top">
+      <!-- ===== Первый экран ===== -->
+      <section class="hero">
+        <div class="container hero__grid">
+          <div class="hero__text">
+            <p class="label">Кофейня и обжарочная · с 2019 года</p>
+            <h1 class="hero__title">Бархат</h1>
+            <p class="hero__lead">
+              Кофе собственной обжарки, который хочется пить медленно. Зерно с
+              лучших ферм мира, десерты нашего кондитера и уютный зал на 32
+              места.
+            </p>
+            <div class="hero__actions">
+              <a href="#menu" class="btn btn--primary">Смотреть меню</a>
+              <a href="#booking" class="btn btn--light">Забронировать столик</a>
+            </div>
+            <div class="status" data-status>
+              <span class="dot"></span
+              ><span data-status-text>Ежедневно с 08:00</span>
+            </div>
+          </div>
+
+          <div class="hero__visual" aria-hidden="true">
+            <div class="cup cup--hero" style="--coffee: #7a4a2b">
+              <div class="cup__saucer"></div>
+              <div class="cup__body"><div class="cup__coffee"></div></div>
+              <div class="cup__handle"></div>
+            </div>
+            <div class="chip chip--a"><b>87</b> баллов SCA</div>
+            <div class="chip chip--b">
+              Свежая обжарка<br /><b>каждый вторник</b>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== О нас ===== -->
+      <section class="section section--white" id="about">
+        <div class="container about">
+          <div class="about__head reveal">
+            <p class="label">О нас</p>
+            <h2 class="h2">Обжариваем сами, небольшими партиями</h2>
+          </div>
+          <div class="about__text reveal">
+            <p>
+              Каждый вторник наш обжарщик готовит свежие партии по 12 кг. Зерно
+              попадает в чашку через 3–14 дней после обжарки, когда вкус раскрыт
+              полностью.
+            </p>
+            <p>
+              Мы работаем напрямую с фермами и импортёрами specialty-кофе и
+              берём только лоты с оценкой от 84 баллов по шкале SCA.
+            </p>
+          </div>
+          <ul class="facts reveal">
+            <li><b>12 кг</b><span>одна партия обжарки</span></li>
+            <li><b>84+</b><span>баллов SCA у каждого лота</span></li>
+            <li><b>32</b><span>места в зале и 10 на террасе</span></li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ===== Авторские напитки ===== -->
+      <section class="section" id="signature">
+        <div class="container">
+          <div class="section__head reveal">
+            <p class="label">Авторское</p>
+            <h2 class="h2">Напитки, ради которых возвращаются</h2>
+          </div>
+          <div class="drinks">
+            <article
+              class="drink reveal"
+              style="--tone: #b23a52; --tone-soft: #fbe5ea; --coffee: #c89b7b"
+            >
+              <div class="drink__art">
+                <div class="cup">
+                  <div class="cup__saucer"></div>
+                  <div class="cup__body"><div class="cup__coffee"></div></div>
+                  <div class="cup__handle"></div>
+                </div>
+              </div>
+              <span class="tag">Хит</span>
+              <h3>Бархатный раф</h3>
+              <p>Сливки, мадагаскарская ваниль и капля солёной карамели.</p>
+              <div class="drink__foot"><span>300 мл</span><b>5,20 €</b></div>
+            </article>
+            <article
+              class="drink reveal"
+              style="--tone: #c08a2e; --tone-soft: #fbefd9; --coffee: #b98552"
+            >
+              <div class="drink__art">
+                <div class="cup">
+                  <div class="cup__saucer"></div>
+                  <div class="cup__body"><div class="cup__coffee"></div></div>
+                  <div class="cup__handle"></div>
+                </div>
+              </div>
+              <span class="tag">Новинка</span>
+              <h3>Медовый флэт уайт</h3>
+              <p>Двойной ристретто, гречишный мёд и щепоть корицы.</p>
+              <div class="drink__foot"><span>180 мл</span><b>4,80 €</b></div>
+            </article>
+            <article
+              class="drink reveal"
+              style="--tone: #1f7a5c; --tone-soft: #ddf2ea; --coffee: #5a3520"
+            >
+              <div class="drink__art">
+                <div class="cup">
+                  <div class="cup__saucer"></div>
+                  <div class="cup__body"><div class="cup__coffee"></div></div>
+                  <div class="cup__handle"></div>
+                </div>
+              </div>
+              <span class="tag">Освежает</span>
+              <h3>Эспрессо-тоник</h3>
+              <p>Тоник, розмарин и эспрессо на эфиопском зерне.</p>
+              <div class="drink__foot"><span>330 мл</span><b>5,00 €</b></div>
+            </article>
+            <article
+              class="drink reveal"
+              style="--tone: #7b4fa0; --tone-soft: #eee4f7; --coffee: #c7a6c9"
+            >
+              <div class="drink__art">
+                <div class="cup">
+                  <div class="cup__saucer"></div>
+                  <div class="cup__body"><div class="cup__coffee"></div></div>
+                  <div class="cup__handle"></div>
+                </div>
+              </div>
+              <span class="tag">Сезон</span>
+              <h3>Лавандовый латте</h3>
+              <p>Домашний сироп лаванды и овсяное молоко.</p>
+              <div class="drink__foot"><span>300 мл</span><b>5,10 €</b></div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== Меню ===== -->
+      <section class="section section--soft" id="menu">
+        <div class="container">
+          <div class="section__head section__head--row reveal">
+            <div>
+              <p class="label">Меню</p>
+              <h2 class="h2">Меню и цены</h2>
+            </div>
+            <p class="note">Цены в евро · растительное молоко +0,60 €</p>
+          </div>
+
+          <div class="tabs" role="tablist" aria-label="Разделы меню">
+            <button
+              class="tab is-active"
+              role="tab"
+              id="tab-coffee"
+              aria-selected="true"
+              aria-controls="panel-coffee"
+              type="button"
+            >
+              Кофе
+            </button>
+            <button
+              class="tab"
+              role="tab"
+              id="tab-alt"
+              aria-selected="false"
+              aria-controls="panel-alt"
+              type="button"
+              tabindex="-1"
+            >
+              Не кофе
+            </button>
+            <button
+              class="tab"
+              role="tab"
+              id="tab-sweet"
+              aria-selected="false"
+              aria-controls="panel-sweet"
+              type="button"
+              tabindex="-1"
+            >
+              Десерты
+            </button>
+            <button
+              class="tab"
+              role="tab"
+              id="tab-breakfast"
+              aria-selected="false"
+              aria-controls="panel-breakfast"
+              type="button"
+              tabindex="-1"
+            >
+              Завтраки
+            </button>
+          </div>
+
+          <div
+            class="panel is-active"
+            role="tabpanel"
+            id="panel-coffee"
+            aria-labelledby="tab-coffee"
+          >
+            <ul class="prices">
+              <li>
+                <div><b>Эспрессо</b><small>двойной шот, 40 мл</small></div>
+                <span>2,80</span>
+              </li>
+              <li>
+                <div><b>Американо</b><small>250 мл</small></div>
+                <span>3,20</span>
+              </li>
+              <li>
+                <div><b>Капучино</b><small>200 мл</small></div>
+                <span>3,90</span>
+              </li>
+              <li>
+                <div><b>Флэт уайт</b><small>180 мл, ристретто ×2</small></div>
+                <span>4,20</span>
+              </li>
+              <li>
+                <div><b>Латте</b><small>300 мл</small></div>
+                <span>4,30</span>
+              </li>
+              <li>
+                <div><b>Кортадо</b><small>120 мл</small></div>
+                <span>3,70</span>
+              </li>
+              <li>
+                <div>
+                  <b>Фильтр V60</b><small>300 мл, зерно недели на выбор</small>
+                </div>
+                <span>4,50</span>
+              </li>
+              <li>
+                <div>
+                  <b>Колд брю</b><small>330 мл, настаиваем 18 часов</small>
+                </div>
+                <span>4,60</span>
+              </li>
+            </ul>
+          </div>
+
+          <div
+            class="panel"
+            role="tabpanel"
+            id="panel-alt"
+            aria-labelledby="tab-alt"
+            hidden
+          >
+            <ul class="prices">
+              <li>
+                <div>
+                  <b>Матча латте</b><small>церемониальная матча, 300 мл</small>
+                </div>
+                <span>4,80</span>
+              </li>
+              <li>
+                <div>
+                  <b>Горячий шоколад</b><small>бельгийский шоколад 70%</small>
+                </div>
+                <span>4,40</span>
+              </li>
+              <li>
+                <div><b>Чай улун</b><small>чайник 400 мл</small></div>
+                <span>3,80</span>
+              </li>
+              <li>
+                <div>
+                  <b>Облепиховый чай</b><small>с имбирём и мёдом</small>
+                </div>
+                <span>4,20</span>
+              </li>
+              <li>
+                <div>
+                  <b>Свежевыжатый сок</b
+                  ><small>апельсин или яблоко, 250 мл</small>
+                </div>
+                <span>4,90</span>
+              </li>
+            </ul>
+          </div>
+
+          <div
+            class="panel"
+            role="tabpanel"
+            id="panel-sweet"
+            aria-labelledby="tab-sweet"
+            hidden
+          >
+            <ul class="prices">
+              <li>
+                <div><b>Круассан</b><small>на французском масле</small></div>
+                <span>3,40</span>
+              </li>
+              <li>
+                <div>
+                  <b>Булочка с кардамоном</b><small>печём каждое утро</small>
+                </div>
+                <span>3,60</span>
+              </li>
+              <li>
+                <div><b>Баскский чизкейк</b><small>кусочек 140 г</small></div>
+                <span>5,20</span>
+              </li>
+              <li>
+                <div><b>Медовик</b><small>кусочек 150 г</small></div>
+                <span>5,00</span>
+              </li>
+              <li>
+                <div><b>Тарт с ягодами</b><small>сезонные ягоды</small></div>
+                <span>5,40</span>
+              </li>
+            </ul>
+          </div>
+
+          <div
+            class="panel"
+            role="tabpanel"
+            id="panel-breakfast"
+            aria-labelledby="tab-breakfast"
+            hidden
+          >
+            <ul class="prices">
+              <li>
+                <div>
+                  <b>Сырники</b><small>со сметаной и ягодами, до 12:00</small>
+                </div>
+                <span>7,50</span>
+              </li>
+              <li>
+                <div><b>Яйцо бенедикт с лососем</b><small>до 12:00</small></div>
+                <span>9,80</span>
+              </li>
+              <li>
+                <div><b>Тост с авокадо</b><small>до 12:00</small></div>
+                <span>7,90</span>
+              </li>
+              <li>
+                <div>
+                  <b>Гранола</b><small>с греческим йогуртом, весь день</small>
+                </div>
+                <span>6,20</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== Зерно ===== -->
+      <section class="section section--dark" id="beans">
+        <div class="container">
+          <div class="section__head section__head--row reveal">
+            <div>
+              <p class="label">Зерно на вынос</p>
+              <h2 class="h2">Возьмите вкус домой</h2>
+            </div>
+            <p class="note">
+              Пачка 250 г · бесплатно смелем под вашу кофеварку
+            </p>
+          </div>
+          <div class="beans">
+            <article
+              class="bean reveal"
+              style="--tone: #c08a2e; --tone-soft: #fbefd9"
+            >
+              <div class="bean__top">
+                <span class="tag">Эфиопия</span
+                ><span class="bean__score">87 SCA</span>
+              </div>
+              <h3>Иргачеффе Кочере</h3>
+              <p class="bean__notes">Бергамот, жасмин, лимонная цедра</p>
+              <div class="roast">
+                <span>Обжарка</span>
+                <div class="roast__bar"><i style="width: 25%"></i></div>
+                <span>светлая</span>
+              </div>
+              <div class="bean__foot">
+                <span>для фильтра</span><b>16,50 €</b>
+              </div>
+            </article>
+            <article
+              class="bean reveal"
+              style="--tone: #b23a52; --tone-soft: #fbe5ea"
+            >
+              <div class="bean__top">
+                <span class="tag">Колумбия</span
+                ><span class="bean__score">86 SCA</span>
+              </div>
+              <h3>Уила Эль Педрегаль</h3>
+              <p class="bean__notes">Красное яблоко, карамель, какао</p>
+              <div class="roast">
+                <span>Обжарка</span>
+                <div class="roast__bar"><i style="width: 50%"></i></div>
+                <span>средняя</span>
+              </div>
+              <div class="bean__foot">
+                <span>универсальная</span><b>14,90 €</b>
+              </div>
+            </article>
+            <article
+              class="bean reveal"
+              style="--tone: #1f7a5c; --tone-soft: #ddf2ea"
+            >
+              <div class="bean__top">
+                <span class="tag">Бразилия</span
+                ><span class="bean__score">84 SCA</span>
+              </div>
+              <h3>Серрадо Минейро</h3>
+              <p class="bean__notes">Молочный шоколад, фундук, патока</p>
+              <div class="roast">
+                <span>Обжарка</span>
+                <div class="roast__bar"><i style="width: 72%"></i></div>
+                <span>средне-тёмная</span>
+              </div>
+              <div class="bean__foot">
+                <span>для эспрессо</span><b>12,90 €</b>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== Часы, адрес, бронь ===== -->
+      <section class="section section--soft" id="visit">
+        <div class="container">
+          <div class="section__head reveal">
+            <p class="label">Контакты</p>
+            <h2 class="h2">Ждём вас в гости</h2>
+          </div>
+          <div class="visit">
+            <div class="panel-card reveal">
+              <h3 class="h3">Часы работы</h3>
+              <ul class="hours" id="hours">
+                <li data-day="1">
+                  <span>Понедельник</span><span>08:00 – 20:00</span>
+                </li>
+                <li data-day="2">
+                  <span>Вторник</span><span>08:00 – 20:00</span>
+                </li>
+                <li data-day="3">
+                  <span>Среда</span><span>08:00 – 20:00</span>
+                </li>
+                <li data-day="4">
+                  <span>Четверг</span><span>08:00 – 20:00</span>
+                </li>
+                <li data-day="5">
+                  <span>Пятница</span><span>08:00 – 22:00</span>
+                </li>
+                <li data-day="6">
+                  <span>Суббота</span><span>09:00 – 22:00</span>
+                </li>
+                <li data-day="0">
+                  <span>Воскресенье</span><span>09:00 – 19:00</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="panel-card reveal">
+              <h3 class="h3">Адрес</h3>
+              <p class="address" id="address">
+                ул. Кофейная, 7<br />Таллинн, 10123
+              </p>
+              <p class="muted">
+                Старый город, вход с арки, первый этаж. Рядом платная парковка.
+              </p>
+              <div class="btn-row">
+                <a
+                  class="btn btn--primary btn--sm"
+                  id="mapLink"
+                  href="https://www.google.com/maps/search/?api=1&query=Tallinn"
+                  target="_blank"
+                  rel="noopener"
+                  >Открыть на карте</a
+                >
+                <button
+                  class="btn btn--light btn--sm"
+                  id="copyAddress"
+                  type="button"
+                >
+                  Скопировать адрес
+                </button>
+              </div>
+              <dl class="contacts">
+                <div>
+                  <dt>Телефон</dt>
+                  <dd><a href="tel:+37255550123">+372 5555 0123</a></dd>
+                </div>
+                <div>
+                  <dt>Почта</dt>
+                  <dd>
+                    <a href="mailto:hello@barkhat.cafe">hello@barkhat.cafe</a>
+                  </dd>
+                </div>
+                <div>
+                  <dt>Instagram</dt>
+                  <dd>
+                    <a
+                      href="https://instagram.com/"
+                      target="_blank"
+                      rel="noopener"
+                      >@barkhat.coffee</a
+                    >
+                  </dd>
+                </div>
+              </dl>
+            </div>
+
+            <form class="booking reveal" id="booking" novalidate>
+              <h3 class="h3">Забронировать столик</h3>
+              <p class="booking__hint">
+                Заполните форму, и откроется письмо с готовым текстом заявки.
+              </p>
+              <div class="field">
+                <label for="b-name">Имя</label>
+                <input
+                  id="b-name"
+                  name="name"
+                  type="text"
+                  placeholder="Анна"
+                  autocomplete="name"
+                  required
+                />
+              </div>
+              <div class="field-row">
+                <div class="field">
+                  <label for="b-date">Дата</label>
+                  <input id="b-date" name="date" type="date" required />
+                </div>
+                <div class="field">
+                  <label for="b-time">Время</label>
+                  <input
+                    id="b-time"
+                    name="time"
+                    type="time"
+                    value="10:00"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="field-row">
+                <div class="field">
+                  <label for="b-guests">Гостей</label>
+                  <select id="b-guests" name="guests">
+                    <option>1</option>
+                    <option selected>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6+</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label for="b-phone">Телефон</label>
+                  <input
+                    id="b-phone"
+                    name="phone"
+                    type="tel"
+                    placeholder="+372 ..."
+                    autocomplete="tel"
+                    required
+                  />
+                </div>
+              </div>
+              <p class="booking__error" id="bookingError" hidden>
+                Заполните имя, дату, время и телефон.
+              </p>
+              <button class="btn btn--gold btn--full" type="submit">
+                Отправить заявку
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ===== Подвал ===== -->
+    <footer class="footer">
+      <div class="container footer__inner">
+        <span class="logo">
+          <span class="logo__mark">Б</span>
+          <span class="logo__word">Бархат</span>
+        </span>
+        <p>
+          © <span id="year">2026</span> Бархат · Кофейня и обжарочная · Таллинн
+        </p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
